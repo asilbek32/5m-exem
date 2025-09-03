@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css"
+        integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="./src/input.css">
+    <title>Asaxiy</title>
+
+</head>
+
+<body class="bg-gray-200">
+    <div class="container max-w-[1550px] mx-auto ">
+        <div id="sidebar"
+            class="absolute p-2 top-0 left-0 z-[999] bg-white p-[16px] w-[85%] h-screen -translate-x-full transition-transform duration-500 ease-in-out">
+            <div class="flex items-center justify-between h-[50px] border-b border-gray-300 mb-5">
+                <div><img src="./assets/asaxiy-logo.svg" alt=""></div>
+                <img src="./assets/close_icon.svg" alt="" class="cursor-pointer" id="censel">
+            </div>
+            <div class="flex flex-col gap-5  mb-5">
+                <div class="flex items-center gap-2">
+                    <img class="w-[25px]" src="./assets/payment.svg" alt="">
+                    <p class="text-[12px] text-black">Оплатить</p>
+                </div>
+                <div class="flex items-center gap-2">
+                    <img class="w-[25px]" src="./assets/tracker.svg" alt="">
+                    <p class="text-[12px] text-black">Отследить</p>
+                </div>
+                <div class="flex items-center gap-2">
+                    <img class="w-[25px]" src="./assets/icons8-new-product.svg" alt="">
+                    <p class="text-[12px] text-black">новый</p>
+                </div>
+                <div class="flex items-center gap-2">
+                    <img class="w-[25px]" src="./assets/news.svg" alt="">
+                    <p class="text-[12px] text-black">новости</p>
+                </div>
+                <div class="flex items-center gap-2">
+                    <img class="w-[25px]" src="./assets/info-black.svg" alt="">
+                    <p class="text-[12px] text-black">О нас</p>
+                </div>
+            </div>
+            <h3 class="mb-5">Доставка и магазины</h3>
+
+            <div class="flex flex-col gap-2 mb-5">
+                <div class="bg-[#F2F2F7] rounded-lg p-2 flex justify-between cursor-pointer">
+                    <img class="w-[25px]" src="./assets/store.svg" alt="">
+                    <p class="font-semibold ">Нвши магазины</p>
+                    <img src="./assets/iconleft.svg" alt="">
+                </div>
+                <div class="bg-[#F2F2F7] rounded-lg p-2 flex justify-between cursor-pointer">
+                    <img class="w-[25px]" src="./assets/delivery-point.svg" alt="">
+                    <p class="font-semibold ">Путкты выдачи</p>
+                    <img src="./assets/iconleft.svg" alt="">
+                </div>
+                <div class="bg-[#F2F2F7] rounded-lg p-2 flex justify-between cursor-pointer">
+                    <img class="w-[25px]" src="./assets/delivery-footer.svg" alt="">
+                    <p class="font-semibold ">Доставка</p>
+                    <img src="./assets/iconleft.svg" alt="">
+                </div>
+            </div>
+
+            <div class="flex justify-center gap-5">
+                <i class="fab fa-instagram"></i>
+                <i class="fab fa-facebook"></i>
+                <i class="fab fa-telegram"></i>
+            </div>
+
+        </div>
+        <div id="mobile_nav"
+            class="flex justify-between items-center h-[60px] px-[10px] sm:px-[20px] md:px-[30px] bg-white shadow lg:hidden mb-3">
+            <div class="cursor-pointer"><i id="menu" class="fa-solid fa-bars fa-lg" style="color: #0b5fef;"></i></div>
+            <div class="w-[100px]"><img src="./assets/asaxiy-logo.svg" alt=""></div>
+            <div class="flex items-center gap-2">
+                <div class="flex items-center gap-1">
+                    <img src="./assets/language-uz.svg" alt="">
+                    <p class="text-[10px]">O'Z</p>
+                </div>
+                <img src="/assets/compare_gray.svg" alt="">
+            </div>
+        </div>
+        <div class="px-3 lg:hidden sm:px-[20px] md:px-[30px] mb-6">
+            <input type="text" placeholder="Поиск..."
+                class="outline-none border-2 border-solid bg-white border-gray-300 px-[12px] py-[8px] rounded-[10px] w-full ">
+
+        </div>
+        <div
+            class="flex justify-between items-center h-[70px] bg-white px-[10px] sm:px-[20px] md:px-[30px] fixed w-full bottom-0 lg: z-10 lg:hidden">
+            <div class="flex flex-col items-center gap-[3px]">
+                <img src="./assets/payment.svg" alt="" class="h-[20px] ">
+                <p class="text-[9px] text-gray-500 font-normal">Главная</p>
+            </div>
+            <div class="flex flex-col items-center gap-[3px]">
+                <img src="./assets/payment.svg" alt="" class="w-[23px] h-[20px]">
+                <p class="text-[9px] text-gray-500 font-normal">Категории</p>
+            </div>
+            <a href="./pages/shop.html">
+                <div class="flex flex-col items-center gap-[3px]">
+                    <img src="./assets/cart.svg" alt="" class="w-[23px] h-[20px]">
+                    <p class=" text-[9px] text-gray-500 font-normal">Корзина</p>
+                </div>
+            </a>
+            <div class="flex flex-col items-center gap-[3px]">
+                <img src="./assets/heart.svg" alt="" class="w-[23px] h-[20px]">
+                <p class=" text-[9px] text-gray-500 font-normal">Избранное</p>
+            </div>
+            <div class="flex flex-col items-center gap-[3px]">
+                <img src="./assets/avatar.svg" alt="" class="w-[15px] h-[20px]">
+                <p class=" text-[12px] text-[#000000] font-normal">Войти</p>
+            </div>
+        </div>
+
+        <nav
+            class="px-[50px] xl:px-[80px] h-[78px] bg-white lg:flex items-center justify-between hidden shadow fixed w-full z-20">
+            <div class="nav_img"><img src="./assets/asaxiy-logo.svg" alt=""></div>
+            <button
+                class="bg-[#006BFF] hover:bg-blue-800 py-[8px] px-[25px] flex items-center gap-2 rounded-xl cursor-pointer">
+                <div class="flex flex-col gap-1 justify-center">
+                    <div class="w-[16px] h-[2px] bg-white"></div>
+                    <div class="w-[16px] h-[2px] bg-white"></div>
+                    <div class="w-[16px] h-[2px] bg-white"></div>
+                </div>
+                <p class="text-white text-base font-bold">Категории</p>
+            </button>
+            <form class="flex max-w-[480px]">
+                <input type="text" placeholder="Поиск..."
+                    class="outline-none border-2 border-solid border-[#006BFF] px-[12px] py-[8px] rounded-l-[10px]">
+                <button class="bg-[#006BFF] text-white py-[8px] px-[11px] rounded-r-[10px]">Искать</button>
+            </form>
+            <div class="flex flex-col items-center gap-[3px]">
+                <img src="./assets/compare_header.svg" alt="" class="h-[20px]">
+                <p class="text-[12px] text-[#000000] font-normal">Сравнение</p>
+            </div>
+            <div class="flex flex-col items-center gap-[3px]">
+                <img src="./assets/payment.svg" alt="" class="w-[23px] h-[20px]">
+                <p class="text-[12px] text-[#000000] font-normal">Оплатить</p>
+            </div>
+            <div class="flex flex-col items-center gap-[3px]">
+                <img src="./assets/tracker.svg" alt="" class="w-[23px] h-[20px]">
+                <p class=" text-[12px] text-[#000000] font-normal">Отследить</p>
+            </div>
+            <a href="./pages/shop.html">
+                <div class="relative flex flex-col items-center gap-[3px]">
+                    <img src="./assets/cart.svg" alt="" class="w-[23px] h-[20px]">
+                    <p class=" text-[12px] text-[#000000] font-normal">Корзина</p>
+                    <div
+                        class="absolute to-0 right-0 w-[16px] h-[16px] rounded-full bg-[#006BFF] flex justify-center items-center text-white">
+                        <span>0</span>
+                    </div>
+
+                </div>
+            </a>
+            <div class="flex flex-col items-center gap-[3px] relative">
+                <img src="./assets/heart.svg" alt="" class="w-[23px] h-[20px]">
+                <p class=" text-[12px] text-[#000000] font-normal">Избранное</p>
+                <div
+                    class="absolute to-0 right-1 w-[16px] h-[16px] rounded-full bg-[#006BFF] flex justify-center items-center text-white">
+                    <span>0</span>
+                </div>
+            </div>
+            <div class="flex flex-col items-center gap-[3px]">
+                <img src="./assets/language-uz.svg" alt="" class="w-[23px] h-[20px]">
+                <p class=" text-[12px] text-[#000000] font-normal">O'zbekcha</p>
+            </div>
+            <div class="flex flex-col items-center gap-[3px]">
+                <img src="./assets/avatar.svg" alt="" class="w-[15px] h-[20px]">
+                <p class=" text-[12px] text-[#000000] font-normal">Войти</p>
+            </div>
+        </nav>
+
+        <section class="px-[10px] sm:px-[20px] md:px-[30px] lg:px-[50px] xl:px-[80px]  lg:pt-[88px] mb-[30px]">
+            <div class="lg:flex justify-between items-center mb-4 hidden">
+                <h2 class="text-[20px] font-bold text-[#0F172A]">Супер цена</h2>
+                <h3 class="text-[13px] text-[#007BFF] font-medium">Супер цена</h3>
+            </div>
+            <div class="bg-[#007BFF] p-[10px] lg:p-[15px] rounded-xl relative">
+                <img src="./assets/prev-weekly.svg" alt=""
+                    class="absolute top-[45%] -left-3 bg-white cursor-pointer rounded-[50%] hidden lg:inline">
+                <img src="./assets/next-weekly.svg" alt=""
+                    class="absolute top-[45%] -right-3 bg-white cursor-pointer rounded-[50%] hidden lg:inline">
+                <div class="flex justify-between items-center mb-3 lg:hidden">
+                    <h2 class="text-[20px] font-bold text-white">Супер цена</h2>
+                    <h3 class="text-[13px] text-white font-bold">Супер цена</h3>
+                </div>
+                <div class="grid grid-cols-2 md:grid-cols-3 gap-4 lg:flex  ower">
+                    <div class="bg-white p-[10px] rounded-lg lg:w-[190px] lg:shrink-0">
+                        <div class="max-w-[102px] mx-auto mb-2"><img
+                                src="https://cdn.asaxiy.uz/asaxiy-content/product/main_image/desktop/6851101f50aea.webp"
+                                alt="asaxiy"></div>
+                        <div class="flex flex-col gap-2">
+                            <h3 class="text-[12px] text-[#000000] font-semibold w-[90%] mb-1">Смартфон HONOR X6c 6/128GB
+                                Океанический голубой</h3>
+                            <div class="flex justify-between items-center">
+                                <p class="line-through text-gray-500 text-[14px]">1 749 000 cum</p>
+                                <span class="text-[#dc3545] text-[13px]">8%</span>
+                            </div>
+                            <div class="flex justify-between items-center">
+                                <p class="text-[14px] text-[#006bff]">1 599 000 sum</p>
+                                <div class="flex items-center text-[#007BFF]">
+                                    <i class="fas fa-star" style="color:#fe7300"></i>
+                                    5
+                                </div>
+                            </div>
+                            <button
+                                class="bg-[#006BFF] text-white w-full px-[10px] py-[5px] rounded-lg">01.10.2025</button>
+                        </div>
+                    </div>
+                    <div class="bg-white p-[10px] rounded-lg lg:w-[190px] lg:shrink-0">
+                        <div class="max-w-[102px] mx-auto mb-2"><img
+                                src="https://cdn.asaxiy.uz/asaxiy-content/product/main_image/desktop/67e3b5da16ae6.jpg.webp"
+                                alt="asaxiy"></div>
+                        <div class="flex flex-col gap-2">
+                            <h3 class="text-[12px] text-[#000000] font-semibold w-[90%] mb-1">Dell Inspiron 3520 / Core
+                                i3-1215U / 8GB / 512GB... </h3>
+                            <div class="flex justify-between items-center">
+                                <p class="line-through text-gray-500 text-[14px]">1 749 000 cum</p>
+                                <span class="text-[#dc3545] text-[13px]">8%</span>
+                            </div>
+                            <div class="flex justify-between items-center">
+                                <p class="text-[14px] text-[#006bff]">1 599 000 sum</p>
+                                <div class="flex items-center text-[#007BFF]">
+                                    <i class="fas fa-star" style="color:#fe7300"></i>
+                                    5
+                                </div>
+                            </div>
+                            <button
+                                class="bg-[#006BFF] text-white w-full px-[10px] py-[5px] rounded-lg">01.10.2025</button>
+                        </div>
+                    </div>
+                    <div class="bg-white p-[10px] rounded-lg lg:w-[190px] lg:shrink-0">
+                        <div class="max-w-[102px] mx-auto mb-2"><img
+                                src="https://cdn.asaxiy.uz/asaxiy-content/product/main_image/desktop/6808e30d5c41a.jpg.webp"
+                                alt="asaxiy"></div>
+                        <div class="flex flex-col gap-2">
+                            <h3 class="text-[12px] text-[#000000] font-semibold w-[90%] mb-1">Xiaomi Redmi 14C 8/256GB
+                                Black Smartphone</h3>
+                            <div class="flex justify-between items-center">
+                                <p class="line-through text-gray-500 text-[14px]">1 749 000 cum</p>
+                                <span class="text-[#dc3545] text-[13px]">8%</span>
+                            </div>
+                            <div class="flex justify-between items-center">
+                                <p class="text-[14px] text-[#006bff]">1 599 000 sum</p>
+                                <div class="flex items-center text-[#007BFF]">
+                                    <i class="fas fa-star" style="color:#fe7300"></i>
+                                    5
+                                </div>
+                            </div>
+                            <button
+                                class="bg-[#006BFF] text-white w-full px-[10px] py-[5px] rounded-lg">01.10.2025</button>
+                        </div>
+                    </div>
+                    <div class="bg-white p-[10px] rounded-lg lg:w-[190px] lg:shrink-0">
+                        <div class="max-w-[102px] mx-auto mb-2"><img
+                                src="https://cdn.asaxiy.uz/asaxiy-content/product/main_image/desktop/63c8e95ee5b78.jpg.webp"
+                                alt="asaxiy"></div>
+                        <div class="flex flex-col gap-2">
+                            <h3 class="text-[12px] text-[#000000] font-semibold w-[90%] mb-1">Телевизор Artel 32KH5500
+                                Smart TV</h3>
+                            <div class="flex justify-between items-center">
+                                <p class="line-through text-gray-500 text-[14px]">1 749 000 cum</p>
+                                <span class="text-[#dc3545] text-[13px]">8%</span>
+                            </div>
+                            <div class="flex justify-between items-center">
+                                <p class="text-[14px] text-[#006bff]">1 599 000 sum</p>
+                                <div class="flex items-center text-[#007BFF]">
+                                    <i class="fas fa-star" style="color:#fe7300"></i>
+                                    5
+                                </div>
+                            </div>
+                            <button
+                                class="bg-[#006BFF] text-white w-full px-[10px] py-[5px] rounded-lg">01.10.2025</button>
+                        </div>
+                    </div>
+                    <div class="bg-white p-[10px] rounded-lg lg:w-[190px] lg:shrink-0">
+                        <div class="max-w-[102px] mx-auto mb-2"><img
+                                src="https://cdn.asaxiy.uz/asaxiy-content/product/main_image/desktop/673c93fb2f6a2.png.webp"
+                                alt="asaxiy"></div>
+                        <div class="flex flex-col gap-2">
+                            <h3 class="text-[12px] text-[#000000] font-semibold w-[90%] mb-1">Smartphone Honor X9C 8/256
+                                Titanium black</h3>
+                            <div class="flex justify-between items-center">
+                                <p class="line-through text-gray-500 text-[14px]">1 749 000 cum</p>
+                                <span class="text-[#dc3545] text-[13px]">8%</span>
+                            </div>
+                            <div class="flex justify-between items-center">
+                                <p class="text-[14px] text-[#006bff]">1 599 000 sum</p>
+                                <div class="flex items-center text-[#007BFF]">
+                                    <i class="fas fa-star" style="color:#fe7300"></i>
+                                    5
+                                </div>
+                            </div>
+                            <button
+                                class="bg-[#006BFF] text-white w-full px-[10px] py-[5px] rounded-lg">01.10.2025</button>
+                        </div>
+                    </div>
+                    <div class="bg-white p-[10px] rounded-lg lg:w-[190px] lg:shrink-0">
+                        <div class="max-w-[102px] mx-auto mb-2"><img
+                                src="https://cdn.asaxiy.uz/asaxiy-content/product/main_image/desktop/68249f36ca94c.jpg.webp"
+                                alt="asaxiy"></div>
+                        <div class="flex flex-col gap-2">
+                            <h3 class="text-[12px] text-[#000000] font-semibold w-[90%] mb-1">Alexandre Dumas: The Count
+                                of Monte Cristo...</h3>
+                            <div class="flex justify-between items-center">
+                                <p class="line-through text-gray-500 text-[14px]">1 749 000 cum</p>
+                                <span class="text-[#dc3545] text-[13px]">8%</span>
+                            </div>
+                            <div class="flex justify-between items-center">
+                                <p class="text-[14px] text-[#006bff]">1 599 000 sum</p>
+                                <div class="flex items-center text-[#007BFF]">
+                                    <i class="fas fa-star" style="color:#fe7300"></i>
+                                    5
+                                </div>
+                            </div>
+                            <button
+                                class="bg-[#006BFF] text-white w-full px-[10px] py-[5px] rounded-lg">01.10.2025</button>
+                        </div>
+                    </div>
+                    <div class="lg:flex gap-4 hidden">
+                        <div class="bg-white p-[10px] rounded-lg lg:w-[190px] lg:shrink-0">
+                            <div class="max-w-[102px] mx-auto mb-2"><img
+                                    src="https://cdn.asaxiy.uz/asaxiy-content/product/main_image/desktop/68249f36ca94c.jpg.webp"
+                                    alt="asaxiy"></div>
+                            <div class="flex flex-col gap-2">
+                                <h3 class="text-[12px] text-[#000000] font-semibold w-[90%] mb-1">Alexandre Dumas: The
+                                    Count
+                                    of Monte Cristo...</h3>
+                                <div class="flex justify-between items-center">
+                                    <p class="line-through text-gray-500 text-[14px]">1 749 000 cum</p>
+                                    <span class="text-[#dc3545] text-[13px]">8%</span>
+                                </div>
+                                <div class="flex justify-between items-center">
+                                    <p class="text-[14px] text-[#006bff]">1 599 000 sum</p>
+                                    <div class="flex items-center text-[#007BFF]">
+                                        <i class="fas fa-star" style="color:#fe7300"></i>
+                                        5
+                                    </div>
+                                </div>
+                                <button
+                                    class="bg-[#006BFF] text-white w-full px-[10px] py-[5px] rounded-lg">01.10.2025</button>
+                            </div>
+                        </div>
+                        <div class="bg-white p-[10px] rounded-lg lg:w-[190px] lg:shrink-0">
+                            <div class="max-w-[102px] mx-auto mb-2"><img
+                                    src="https://cdn.asaxiy.uz/asaxiy-content/product/main_image/desktop/63c8e95ee5b78.jpg.webp"
+                                    alt="asaxiy"></div>
+                            <div class="flex flex-col gap-2">
+                                <h3 class="text-[12px] text-[#000000] font-semibold w-[90%] mb-1">Телевизор Artel
+                                    32KH5500
+                                    Smart TV</h3>
+                                <div class="flex justify-between items-center">
+                                    <p class="line-through text-gray-500 text-[14px]">1 749 000 cum</p>
+                                    <span class="text-[#dc3545] text-[13px]">8%</span>
+                                </div>
+                                <div class="flex justify-between items-center">
+                                    <p class="text-[14px] text-[#006bff]">1 599 000 sum</p>
+                                    <div class="flex items-center text-[#007BFF]">
+                                        <i class="fas fa-star" style="color:#fe7300"></i>
+                                        5
+                                    </div>
+                                </div>
+                                <button
+                                    class="bg-[#006BFF] text-white w-full px-[10px] py-[5px] rounded-lg">01.10.2025</button>
+                            </div>
+                        </div>
+                        <div class="bg-white p-[10px] rounded-lg lg:w-[190px] lg:shrink-0">
+                            <div class="max-w-[102px] mx-auto mb-2"><img
+                                    src="https://cdn.asaxiy.uz/asaxiy-content/product/main_image/desktop/68249f36ca94c.jpg.webp"
+                                    alt="asaxiy"></div>
+                            <div class="flex flex-col gap-2">
+                                <h3 class="text-[12px] text-[#000000] font-semibold w-[90%] mb-1">Alexandre Dumas: The
+                                    Count
+                                    of Monte Cristo...</h3>
+                                <div class="flex justify-between items-center">
+                                    <p class="line-through text-gray-500 text-[14px]">1 749 000 cum</p>
+                                    <span class="text-[#dc3545] text-[13px]">8%</span>
+                                </div>
+                                <div class="flex justify-between items-center">
+                                    <p class="text-[14px] text-[#006bff]">1 599 000 sum</p>
+                                    <div class="flex items-center text-[#007BFF]">
+                                        <i class="fas fa-star" style="color:#fe7300"></i>
+                                        5
+                                    </div>
+                                </div>
+                                <button
+                                    class="bg-[#006BFF] text-white w-full px-[10px] py-[5px] rounded-lg">01.10.2025</button>
+                            </div>
+                        </div>
+                        <div class="bg-white p-[10px] rounded-lg lg:w-[190px] lg:shrink-0">
+                            <div class="max-w-[102px] mx-auto mb-2"><img
+                                    src="https://cdn.asaxiy.uz/asaxiy-content/product/main_image/desktop/63c8e95ee5b78.jpg.webp"
+                                    alt="asaxiy"></div>
+                            <div class="flex flex-col gap-2">
+                                <h3 class="text-[12px] text-[#000000] font-semibold w-[90%] mb-1">Телевизор Artel
+                                    32KH5500
+                                    Smart TV</h3>
+                                <div class="flex justify-between items-center">
+                                    <p class="line-through text-gray-500 text-[14px]">1 749 000 cum</p>
+                                    <span class="text-[#dc3545] text-[13px]">8%</span>
+                                </div>
+                                <div class="flex justify-between items-center">
+                                    <p class="text-[14px] text-[#006bff]">1 599 000 sum</p>
+                                    <div class="flex items-center text-[#007BFF]">
+                                        <i class="fas fa-star" style="color:#fe7300"></i>
+                                        5
+                                    </div>
+                                </div>
+                                <button
+                                    class="bg-[#006BFF] text-white w-full px-[10px] py-[5px] rounded-lg">01.10.2025</button>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <section class="px-[10px] sm:px-[20px] md:px-[30px] lg:px-[50px] xl:px-[80px]  mb-[30px] relative">
+            <img src="./assets/prev-weekly.png" alt=""
+                class="w-[40px] h-[40px] absolute top-1/2 -translate-y-1/2 left-0 lg:left-15 bg-white rounded-full shadow cursor-pointer z-10">
+            <img src="./assets/next-weekly.png" alt=""
+                class="w-[40px] h-[40px] absolute top-1/2 -translate-y-1/2 right-0 lg:right-15 bg-white rounded-full shadow cursor-pointer z-10">
+
+            <div class="ower flex gap-3 items-center ">
+
+                <!-- <img src="./assets/prev-weekly.png" alt="" class="w-[40px] h-[40px] absolute top-[40%] left-0 bg-white rounded-[50%]">
+                <img src="./assets/next-weekly.png" alt="" class="w-[40px] h-[40px] absolute top-[40%] right-0 bg-white rounded-[50%]"> -->
+
+                <div class="w-full sm:w-[298px] md:w-[309px] lg:w-[328px] shrink-0"><img
+                        src="https://cdn.asaxiy.uz/asaxiy-content/uploads/banner/desktop/68277348a3c89.jpg.webp" alt=""
+                        class="rounded-lg">
+                </div>
+                <div class="w-full sm:w-[298px] md:w-[309px] lg:w-[328px] shrink-0"><img
+                        src="https://cdn.asaxiy.uz/asaxiy-content/uploads/banner/desktop/67dbf787c2fbd.jpg.webp" alt=""
+                        class="rounded-lg">
+                </div>
+                <div class="w-full sm:w-[298px] md:w-[309px] lg:w-[328px] shrink-0"><img
+                        src="https://cdn.asaxiy.uz/asaxiy-content/uploads/banner/desktop/664c7061e60d4.jpg.webp" alt=""
+                        class="rounded-lg">
+                </div>
+                <div class="w-full sm:w-[298px] md:w-[309px] lg:w-[328px] shrink-0"><img
+                        src="https://cdn.asaxiy.uz/asaxiy-content/uploads/banner/desktop/689c2e6f50aae.png.webp" alt=""
+                        class="rounded-lg">
+                </div>
+                <div class="w-full sm:w-[298px] md:w-[309px] lg:w-[328px] shrink-0"><img
+                        src="https://cdn.asaxiy.uz/asaxiy-content/uploads/banner/desktop/664c6f186020b.jpg.webp" alt=""
+                        class="rounded-lg">
+                </div>
+                <div class="w-full sm:w-[298px] md:w-[309px] lg:w-[328px] shrink-0"><img
+                        src="https://cdn.asaxiy.uz/asaxiy-content/uploads/banner/desktop/664c6775eabf7.jpg.webp" alt=""
+                        class="rounded-lg">
+                </div>
+            </div>
+        </section>
+
+        <section class="px-[10px] sm:px-[20px] md:px-[30px] lg:px-[50px] xl:px-[80px] mb-[500px]">
+            <divi id="card" class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5  gap-3">
+            </divi>
+        </section>
+
+    </div>
+
+
+
+    <script src="./app.js"></script>
+
+</body>
+
+</html>
