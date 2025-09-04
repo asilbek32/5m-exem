@@ -13,6 +13,7 @@ let empt_like = document.getElementById("empt_like");
 let section_card = document.getElementById("section_card");
 let like_section = document.getElementById("like_section");
 let total_shop = document.getElementById("total_shop");
+let counter = document.getElementById("counter");
 
 menu.addEventListener("click", () => {
   sidebar.classList.remove("-translate-x-full");
@@ -131,6 +132,7 @@ function addUI(data) {
       }
       shop = [...shop, { ...product, counter: 1, userPrice: product.price }];
       localStorage.setItem("shop", JSON.stringify(shop));
+      counter.innerHTML = shop.length;
     });
   });
   let likeBtns = document.querySelectorAll(".like");
@@ -147,6 +149,7 @@ function addUI(data) {
 }
 
 function addUIShop(data) {
+  
   if (data.length === 0) {
     empty_shop.classList.remove("hidden");
     section_card.classList.add("hidden");
@@ -269,7 +272,6 @@ function totalPrice(shop) {
 }
 totalPrice(shop);
 console.log(like);
-
 
 function addUILike(data) {
   if (data.length === 0) {
