@@ -72,7 +72,7 @@
         <div id="mobile_nav"
             class="flex justify-between items-center h-[60px] px-[10px] sm:px-[20px] md:px-[30px] bg-white shadow lg:hidden mb-3">
             <div class="cursor-pointer"><i id="menu" class="fa-solid fa-bars fa-lg" style="color: #0b5fef;"></i></div>
-            <div class="w-[100px]"><img src="../assets/asaxiy-logo.svg" alt=""></div>
+            <div class="w-[100px]"><img src="./assets/asaxiy-logo.svg" alt=""></div>
             <div class="flex items-center gap-2">
                 <div class="flex items-center gap-1">
                     <img src="../assets/language-uz.svg" alt="">
@@ -115,7 +115,7 @@
         </div>
         <nav
             class="px-[50px] xl:px-[80px] h-[78px] bg-white lg:flex items-center justify-between hidden shadow fixed w-full z-20">
-            <div class="nav_img"><img src="../assets/asaxiy-logo.svg" alt=""></div>
+            <div class="nav_img"><img src="./assets/asaxiy-logo.svg" alt=""></div>
             <button
                 class="bg-[#006BFF] hover:bg-blue-800 py-[8px] px-[25px] flex items-center gap-2 rounded-xl cursor-pointer">
                 <div class="flex flex-col gap-1 justify-center">
@@ -178,60 +178,18 @@
             <p class="text-[#000000] text-[13px]">Корзина</p>
         </div>
 
-        <div class=" px-[10px] sm:px-[20px] md:px-[30px] lg:px-[50px] xl:px-[80px] mb-[16px]">
-            <h3 class="text-[24px] text-[#212529] mb-3">Корзина</h3>
-            <div class="flex flex-col md:flex-row gap-[20px]">
-                <div
-                    class="flex justify-between items-center bg-[#007BFF] px-[12px] py-[7px] rounded-[8px] md:relative mg:block">
-                    <h4 class="text-[#FFFFFF] text-base ">Стандартные покупки</h4>
-                    <div
-                        class="md:absolute top-[1px] right-0 w-[16px] h-[16px] rounded-full bg-white flex justify-center items-center text-[#006BFF]">
-                        <span class="text-[13px]">0</span>
-                    </div>
-                </div>
-                <div class="flex justify-between items-center px-[12px] py-[7px] rounded-[8px] md:relative mg:block">
-                    <h4 class="text-[#000000] text-base ">Товары на рассрочку</h4>
-                    <div
-                        class="md:absolute top-[1px] right-0 w-[16px] h-[16px] rounded-full bg-[#006BFF] flex justify-center items-center text-white">
-                        <span class="text-[13px]">0</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div id="empty_shop"
+        <div id="empt_like"
             class="flex flex-col items-center justify-center gap-[8px] px-[10px] sm:px-[20px] md:px-[30px] lg:px-[50px] xl:px-[80px] hidden">
-            <div class="mb-[8px]"><img src="../assets/emptyshop.png" alt=""></div>
-            <h3 class="text-[#212529] text-[24px] font-bold">В вашей корзине пока нет товаров</h3>
-            <p class="text-[#212529] text-[16px] font-medium">Начните с основ или найдите продукт с помощью функции
-                поиска.</p>
+            <div class="mb-[8px]"><img src="../assets/heart-bubble.svg.png" alt=""></div>
+            <h3 class="text-[#212529] text-[24px] font-bold">Нет любимых продуктов</h3>
+            <p class="text-[#212529] text-[16px] font-medium">Добавить с символом  на продукте</p>
         </div>
 
-        <section id="section_card"
-            class="mb-[100px] flex flex-col lg:flex-row justify-between gap-[30px]  px-[10px] sm:px-[20px] md:px-[30px] lg:px-[50px] xl:px-[80px]">
-
-            <div id="shop_card" class="flex-1 px-[30px] bg-white rounded">
-                <div class="flex p-[10px] py-[10px]  gap-5 border-b border-b-gray-400">
-
-                </div>
-
-
+        <section id="like_section" class="px-[10px] sm:px-[20px] md:px-[30px] lg:px-[50px] xl:px-[80px] mb-[500px]">
+            <div id="lice_card" class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5  gap-3">
             </div>
-
-            <div class="bg-white rounded p-[25px] self-start w-full lg:w-[300px]">
-                <div class="mb-[15px]">
-                    <p class="text-[#fe7300] text-base mb-3">There are 2 items in your cart</p>
-                    <div class="flex justify-between border-b border-b-gray-400 pb-[25px]">
-                        <p>Total:</p>
-                        <span id="total_shop" class="text-[#212529] font-semibold">7 828 000 so'm</span>
-                    </div>
-                </div>
-                <div class="flex items-center justify-center">
-                    <button class="bg-[#006BFF] text-white w-[65%] py-[8px] rounded">LEGALIZE</button>
-                </div>
-            </div>
-
         </section>
+
 
     </div>
 
